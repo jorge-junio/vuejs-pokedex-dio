@@ -1,0 +1,9 @@
+.text{
+	//incluindo o mixin que criamos
+	@include modifiers($colors, 'color');
+}
+
+.bg{
+	//incluindo o mixin que criamos
+	@include modifiers($colors, 'background');
+}

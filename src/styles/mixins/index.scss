@@ -1,0 +1,15 @@
+/*Isso é utilizado para criar regras de CSS dinamicamente como por exemplo se passássemo um $attribute = color
+ e o $map de cores o mixin criaria a seguinte regra
+		$--{white}{
+			color: #ffffff;
+		}
+ */
+@mixin modifiers($map, $attribute) {
+	//realiza uma espécie de foreach
+	@each $key, $value in $map {
+		//está acessando o valor daquela chave ($key)
+		&--#{$key}{
+			#{$attribute}: $value;
+		}
+	}
+}
