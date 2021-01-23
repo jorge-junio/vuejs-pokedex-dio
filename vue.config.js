@@ -5,8 +5,9 @@ module.exports = {
     loaderOptions: {
       sass: {
         additionalData: `
-          @import "@/styles/functions/";
-          @import "@/styles/colors/";
+          @import "@/styles/functions";
+          @import "@/styles/colors";
+          @import "@/styles/variables";
         `,
         
       }
