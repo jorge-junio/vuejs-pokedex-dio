@@ -30,6 +30,7 @@ export default {
 		state.isPokemonSearch = false;
 		state.listHasError = false;
 		state.searchHasError = false;
+		state.pokemonId = null;
 	},
 
 	//adiciona a pokedex somente o pokemon que eu fiz a busca
@@ -47,5 +48,11 @@ export default {
 	//informa a interface se a busca deu algum erro
 	setSearchHasError(flag){
 		state.searchHasError = flag;
+	},
+
+	//seleciona um pokemon
+	setPokemonId(id = null){
+		state.isPokemonSearch = false;
+		state.pokemonId = id;
 	},
 };
